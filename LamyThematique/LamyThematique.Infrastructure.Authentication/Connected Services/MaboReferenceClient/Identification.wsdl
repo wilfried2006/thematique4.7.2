@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:impl="Identification" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="Identification" xmlns="http://schemas.xmlsoap.org/wsdl/" name="Identification" targetNamespace="Identification" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="IdentificationAuthentificationUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationAuthentificationUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDisconnectionUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDisconnectionUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRegistrationUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRegistrationUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationModificationUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationModificationUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetInformationUsersRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetInformationUsersResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationInitPasswordRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationInitPasswordResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationChangePasswordRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationChangePasswordResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetAccessCodeFromTokenRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetAccessCodeFromTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationIsPasswordValidRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationIsPasswordValidResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdatePasswordRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdatePasswordResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUserInformationRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUserInformationResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConsultationServiceRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConsultationServiceResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUnsubscribeUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUnsubscribeUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateDemoUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateDemoUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationValidateDemoUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationValidateDemoUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetInformationPortalRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetInformationPortalResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationFirstConnectionUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationFirstConnectionUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUsersListRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUsersListResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserListRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserListResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateUserListRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateUserListResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDeleteUserListRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDeleteUserListResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetParentUserInfosRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetParentUserInfosResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateSiebelDemoUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateSiebelDemoUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationSearchUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationSearchUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateOnlineOrderRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateOnlineOrderResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConfirmOnlineOrderRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConfirmOnlineOrderResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpgradeRightsRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpgradeRightsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateTokenRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCheckTestUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCheckTestUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationValidateTestUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationValidateTestUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalsRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalFunctionsRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalFunctionsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateUserTokenRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateUserTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetConnectedUserInformationRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetConnectedUserInformationResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateConnectedUserInformationRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateConnectedUserInformationResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateConnectedUserPasswordRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateConnectedUserPasswordResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationVerifyTokenRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationVerifyTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserFromEnterpriseAccessRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserFromEnterpriseAccessResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUsersForAdminRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUsersForAdminResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUserInfosForAdminRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetUserInfosForAdminResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateUserInfosByAdminRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationUpdateUserInfosByAdminResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDeleteUserByAdminRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationDeleteUserByAdminResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserByAdminRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationCreateUserByAdminResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationAcceptTermsOfUseRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationAcceptTermsOfUseResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationIsEmailUniqueRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationIsEmailUniqueResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConfirmPartnerUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationConfirmPartnerUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRegisterFreeUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRegisterFreeUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRenewalDemoUserRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationRenewalDemoUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPurchaseOrderInformationRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPurchaseOrderInformationResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalCountriesRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalCountriesResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateExtranetTokenRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGenerateExtranetTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalInfoRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationGetPortalInfoResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationMAILRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationMAILResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationWSDLRequest">
+    <wsdl:part name="xmlFlow" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="IdentificationWSDLResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="IdentificationPortType">
+    <wsdl:operation name="AuthentificationUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationAuthentificationUserRequest" />
+      <wsdl:output message="tns:IdentificationAuthentificationUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectionUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationDisconnectionUserRequest" />
+      <wsdl:output message="tns:IdentificationDisconnectionUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationRegistrationUserRequest" />
+      <wsdl:output message="tns:IdentificationRegistrationUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificationUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationModificationUserRequest" />
+      <wsdl:output message="tns:IdentificationModificationUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationUsers" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetInformationUsersRequest" />
+      <wsdl:output message="tns:IdentificationGetInformationUsersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="InitPassword" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationInitPasswordRequest" />
+      <wsdl:output message="tns:IdentificationInitPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationChangePasswordRequest" />
+      <wsdl:output message="tns:IdentificationChangePasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessCodeFromToken" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetAccessCodeFromTokenRequest" />
+      <wsdl:output message="tns:IdentificationGetAccessCodeFromTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPasswordValid" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationIsPasswordValidRequest" />
+      <wsdl:output message="tns:IdentificationIsPasswordValidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpdatePasswordRequest" />
+      <wsdl:output message="tns:IdentificationUpdatePasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetUserInformationRequest" />
+      <wsdl:output message="tns:IdentificationGetUserInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultationService" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationConsultationServiceRequest" />
+      <wsdl:output message="tns:IdentificationConsultationServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribeUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUnsubscribeUserRequest" />
+      <wsdl:output message="tns:IdentificationUnsubscribeUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDemoUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateDemoUserRequest" />
+      <wsdl:output message="tns:IdentificationCreateDemoUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDemoUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationValidateDemoUserRequest" />
+      <wsdl:output message="tns:IdentificationValidateDemoUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationPortal" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetInformationPortalRequest" />
+      <wsdl:output message="tns:IdentificationGetInformationPortalResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="FirstConnectionUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationFirstConnectionUserRequest" />
+      <wsdl:output message="tns:IdentificationFirstConnectionUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetUsersListRequest" />
+      <wsdl:output message="tns:IdentificationGetUsersListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserList" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateUserListRequest" />
+      <wsdl:output message="tns:IdentificationCreateUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserList" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpdateUserListRequest" />
+      <wsdl:output message="tns:IdentificationUpdateUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserList" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationDeleteUserListRequest" />
+      <wsdl:output message="tns:IdentificationDeleteUserListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParentUserInfos" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetParentUserInfosRequest" />
+      <wsdl:output message="tns:IdentificationGetParentUserInfosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSiebelDemoUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateSiebelDemoUserRequest" />
+      <wsdl:output message="tns:IdentificationCreateSiebelDemoUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationSearchUserRequest" />
+      <wsdl:output message="tns:IdentificationSearchUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOnlineOrder" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateOnlineOrderRequest" />
+      <wsdl:output message="tns:IdentificationCreateOnlineOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOnlineOrder" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationConfirmOnlineOrderRequest" />
+      <wsdl:output message="tns:IdentificationConfirmOnlineOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeRights" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpgradeRightsRequest" />
+      <wsdl:output message="tns:IdentificationUpgradeRightsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateToken" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGenerateTokenRequest" />
+      <wsdl:output message="tns:IdentificationGenerateTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckTestUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCheckTestUserRequest" />
+      <wsdl:output message="tns:IdentificationCheckTestUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTestUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationValidateTestUserRequest" />
+      <wsdl:output message="tns:IdentificationValidateTestUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortals" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetPortalsRequest" />
+      <wsdl:output message="tns:IdentificationGetPortalsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalFunctions" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetPortalFunctionsRequest" />
+      <wsdl:output message="tns:IdentificationGetPortalFunctionsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateUserToken" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGenerateUserTokenRequest" />
+      <wsdl:output message="tns:IdentificationGenerateUserTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectedUserInformation" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetConnectedUserInformationRequest" />
+      <wsdl:output message="tns:IdentificationGetConnectedUserInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConnectedUserInformation" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpdateConnectedUserInformationRequest" />
+      <wsdl:output message="tns:IdentificationUpdateConnectedUserInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConnectedUserPassword" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpdateConnectedUserPasswordRequest" />
+      <wsdl:output message="tns:IdentificationUpdateConnectedUserPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyToken" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationVerifyTokenRequest" />
+      <wsdl:output message="tns:IdentificationVerifyTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserFromEnterpriseAccess" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateUserFromEnterpriseAccessRequest" />
+      <wsdl:output message="tns:IdentificationCreateUserFromEnterpriseAccessResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersForAdmin" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetUsersForAdminRequest" />
+      <wsdl:output message="tns:IdentificationGetUsersForAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfosForAdmin" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetUserInfosForAdminRequest" />
+      <wsdl:output message="tns:IdentificationGetUserInfosForAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfosByAdmin" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationUpdateUserInfosByAdminRequest" />
+      <wsdl:output message="tns:IdentificationUpdateUserInfosByAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByAdmin" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationDeleteUserByAdminRequest" />
+      <wsdl:output message="tns:IdentificationDeleteUserByAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserByAdmin" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationCreateUserByAdminRequest" />
+      <wsdl:output message="tns:IdentificationCreateUserByAdminResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptTermsOfUse" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationAcceptTermsOfUseRequest" />
+      <wsdl:output message="tns:IdentificationAcceptTermsOfUseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailUnique" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationIsEmailUniqueRequest" />
+      <wsdl:output message="tns:IdentificationIsEmailUniqueResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPartnerUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationConfirmPartnerUserRequest" />
+      <wsdl:output message="tns:IdentificationConfirmPartnerUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFreeUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationRegisterFreeUserRequest" />
+      <wsdl:output message="tns:IdentificationRegisterFreeUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RenewalDemoUser" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationRenewalDemoUserRequest" />
+      <wsdl:output message="tns:IdentificationRenewalDemoUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseOrderInformation" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetPurchaseOrderInformationRequest" />
+      <wsdl:output message="tns:IdentificationGetPurchaseOrderInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalCountries" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetPortalCountriesRequest" />
+      <wsdl:output message="tns:IdentificationGetPortalCountriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateExtranetToken" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGenerateExtranetTokenRequest" />
+      <wsdl:output message="tns:IdentificationGenerateExtranetTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalInfo" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationGetPortalInfoRequest" />
+      <wsdl:output message="tns:IdentificationGetPortalInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="MAIL" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationMAILRequest" />
+      <wsdl:output message="tns:IdentificationMAILResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="WSDL" parameterOrder="xmlFlow">
+      <wsdl:input message="tns:IdentificationWSDLRequest" />
+      <wsdl:output message="tns:IdentificationWSDLResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IdentificationBinding" type="tns:IdentificationPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="AuthentificationUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#AuthentificationUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectionUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#DisconnectionUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#RegistrationUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificationUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ModificationUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationUsers">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetInformationUsers" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitPassword">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#InitPassword" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ChangePassword" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessCodeFromToken">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetAccessCodeFromToken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPasswordValid">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#IsPasswordValid" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpdatePassword" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetUserInformation" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultationService">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ConsultationService" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribeUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UnsubscribeUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDemoUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateDemoUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDemoUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ValidateDemoUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInformationPortal">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetInformationPortal" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FirstConnectionUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#FirstConnectionUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersList">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetUsersList" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserList">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateUserList" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserList">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpdateUserList" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserList">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#DeleteUserList" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParentUserInfos">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetParentUserInfos" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSiebelDemoUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateSiebelDemoUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#SearchUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOnlineOrder">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateOnlineOrder" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOnlineOrder">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ConfirmOnlineOrder" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeRights">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpgradeRights" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateToken">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GenerateToken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckTestUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CheckTestUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTestUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ValidateTestUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortals">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetPortals" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalFunctions">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetPortalFunctions" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateUserToken">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GenerateUserToken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectedUserInformation">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetConnectedUserInformation" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConnectedUserInformation">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpdateConnectedUserInformation" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConnectedUserPassword">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpdateConnectedUserPassword" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyToken">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#VerifyToken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserFromEnterpriseAccess">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateUserFromEnterpriseAccess" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersForAdmin">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetUsersForAdmin" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfosForAdmin">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetUserInfosForAdmin" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfosByAdmin">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#UpdateUserInfosByAdmin" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByAdmin">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#DeleteUserByAdmin" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserByAdmin">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#CreateUserByAdmin" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptTermsOfUse">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#AcceptTermsOfUse" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailUnique">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#IsEmailUnique" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPartnerUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#ConfirmPartnerUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterFreeUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#RegisterFreeUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenewalDemoUser">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#RenewalDemoUser" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseOrderInformation">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetPurchaseOrderInformation" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalCountries">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetPortalCountries" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateExtranetToken">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GenerateExtranetToken" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortalInfo">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#GetPortalInfo" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MAIL">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#MAIL" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSDL">
+      <soap:operation soapAction="urn:Identification#IdentificationServer#WSDL" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="xmlFlow" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="Identification" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" parts="return" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IdentificationService">
+    <wsdl:port name="IdentificationPort" binding="tns:IdentificationBinding">
+      <soap:address location="https://abo-prod.wkf.fr/webservices/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
