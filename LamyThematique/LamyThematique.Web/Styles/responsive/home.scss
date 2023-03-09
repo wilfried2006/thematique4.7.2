@@ -1,0 +1,500 @@
+@media (max-width: 768px) and (min-width: 320px) {
+    .home-index {
+        .home-header {
+            background: linear-gradient(178.5deg, rgba(0,91,146,.8) 0%, rgba(0,61,97,.8) 93%, $bg-gray 93.2%);
+            margin-bottom: 24px;
+            padding-top: 40px;
+            padding-bottom: 32px;
+
+            .header-image {
+                display: none;
+            }
+
+            .search-home-header {
+                margin: 0 16px;
+
+                .home-title {
+                    font-size: 32px;
+                }
+
+                .home-sub-title {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .home-themes {
+            margin-bottom: 24px;
+            padding: 0 8px;
+
+            .theme-title-wrapper .theme-title {
+                font-size: 28px;
+            }
+
+            .themes-list .theme-item {
+                width: 100%;
+            }
+        }
+
+        .home-block-1 {
+            background: linear-gradient(182deg, $bg-gray 6%, rgba(236,88,98,.8) 6.2%, rgba(236,88,98,.8) 94%, $white-color 94.2%);
+            padding: 80px 16px;
+
+            .home-block-title {
+                font-size: 28px;
+            }
+
+            img.home-ls {
+                max-width: 300px;
+            }
+
+            .home-block-sub-title {
+                margin-bottom: 0;
+            }
+        }
+
+        .home-block-2 {
+            padding: 40px 16px;
+
+            .home-block-title {
+                font-size: 28px;
+            }
+
+            .home-block-sub-title {
+                margin-bottom: 24px;
+            }
+
+            .steps {
+                flex-direction: column;
+
+                .step {
+                    width: 100%;
+                    margin: 0 0 40px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .home-block-3 {
+            background: linear-gradient(183deg, $white-color 6%, rgba(236,88,98,.8) 6.2%, rgba(236,88,98,.8) 94%, $bg-gray 94.2%);
+            padding: 40px 16px 80px 16px;
+
+            .block-image {
+                display: none;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .testimonies {
+                flex-direction: column-reverse;
+
+                .slide-block {
+                    margin-top: 32px;
+                    margin-right: 0;
+
+                    .slideshow-container {
+                        .slide {
+                            min-height: 280px;
+
+                            .text {
+                                font-size: 16px;
+                            }
+                        }
+
+                        a {
+                            display: none;
+                        }
+                    }
+
+                    .icon-quote.q-open {
+                        margin-left: 0;
+                    }
+
+                    .icon-quote.q-close {
+                        margin-right: 0;
+                    }
+                }
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .home-block-video {
+            padding: 40px 16px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .video-block {
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    max-width: 450px;
+                }
+            }
+        }
+
+        .home-block-4 {
+            background: linear-gradient(178deg, $bg-gray 4%, $white-color 4.2%);
+            padding: 64px 16px 40px 16px;
+            flex-direction: column-reverse;
+
+            .block-image {
+                margin: 0 0 32px 0;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .steps {
+                text-align: center;
+                width: 100%;
+
+                .step h4 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .search-block .search-form {
+        flex-direction: column;
+
+        .wk-field-select-container {
+            width: 100%;
+            border-bottom: 1px solid $light--color;
+
+            .wk-field-select {
+                padding: 11px 16px;
+            }
+        }
+
+        .search-input {
+            input {
+                padding: 11px 16px;
+            }
+        }
+
+        .search-button {
+            width: 100%;
+            height: 40px;
+
+            .mobile-text {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .home-index {
+        .home-header {
+            background: linear-gradient(178.5deg,rgba(0,91,146,.8) 0%,rgba(0,61,97,.8) 92%, $bg-gray 92.2%);
+            margin-bottom: 16px;
+            padding-bottom: 80px;
+
+            .header-image {
+                margin-left: -130px;
+                max-width: 50%;
+            }
+
+            .search-home-header {
+                margin-left: -70px;
+                margin-right: 16px;
+                margin-top: 32px;
+            }
+        }
+
+        .home-themes {
+            margin-bottom: 16px;
+            padding: 0 8px;
+
+            .themes-list .theme-item {
+                width: 50%;
+            }
+        }
+
+        .home-block-1 {
+            background: linear-gradient(182deg, $bg-gray 7%, rgba(236,88,98,.8) 7.2%, rgba(236,88,98,.8) 93%, $white-color 93.2%);
+            padding: 64px 16px;
+        }
+
+        .home-block-2 {
+            padding: 40px 16px;
+
+            .home-block-sub-title {
+                margin-bottom: 24px;
+            }
+
+            .steps {
+                flex-direction: column;
+
+                .step {
+                    width: 100%;
+                    margin: 0 0 40px 0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .home-block-3 {
+            background: linear-gradient(182deg, $white-color 7%, rgba(236,88,98,.8) 7.2%, rgba(236,88,98,.8) 93%, $bg-gray 93.2%);
+            padding: 40px 16px 80px 16px;
+
+            .testimonies {
+                flex-direction: column-reverse;
+
+                .slide-block {
+                    margin-top: 32px;
+                    margin-right: 0;
+
+                    .slideshow-container {
+                        .slide {
+                            min-height: 210px;
+                        }
+
+                        a.prev {
+                            margin-right: 72px;
+                        }
+
+                        a.next {
+                            margin-left: 72px;
+                        }
+                    }
+
+                    .icon-quote.q-open {
+                        margin-left: 40px;
+                    }
+
+                    .icon-quote.q-close {
+                        margin-right: 40px;
+                    }
+                }
+
+                video {
+                    width: 498px;
+                    height: 281px;
+                }
+            }
+        }
+
+        .home-block-video {
+            padding: 40px 50px 80px 50px;
+
+            .video-block video {
+                width: 550px;
+                height: 310px;
+            }
+        }
+
+        .home-block-4 {
+            background: linear-gradient(178deg, $bg-gray 6%, $white-color 6.2%);
+            padding: 80px 16px 40px 16px;
+
+            .block-image {
+                margin-top: 0;
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1365px) and (min-width: 1024px) {
+    .home-index {
+        .home-header {
+            background: linear-gradient(178.5deg,rgba(0,91,146,.8) 0%,rgba(0,61,97,.8) 92%, $bg-gray 92.2%);
+
+            .header-image {
+                margin-left: -50px;
+                max-width: 450px;
+                margin-right: 50px;
+                margin-bottom: 80px;
+            }
+
+            .search-home-header {
+                margin-left: -80px;
+            }
+        }
+
+        .home-themes {
+            margin-bottom: 24px;
+
+            .themes-list .theme-item .theme-item-home {
+                min-height: 134px;
+            }
+        }
+
+        .home-block-1 {
+            background: linear-gradient(182deg, $bg-gray 8%, rgba(236,88,98,.8) 8.2%, rgba(236,88,98,.8) 92%, $white-color 92.2%);
+
+            .block-image {
+                margin-right: -130px;
+                width: 50%;
+            }
+        }
+
+        .home-block-3 {
+            background: linear-gradient(182deg, $white-color 7%, rgba(236,88,98,.8) 7.2%, rgba(236,88,98,.8) 93%, $bg-gray 93.2%);
+            padding: 40px 96px 80px 96px;
+
+            .testimonies {
+                flex-direction: column-reverse;
+
+                .slide-block {
+                    margin-top: 32px;
+                    margin-right: 0;
+
+                    .slideshow-container {
+                        .slide {
+                            min-height: 210px;
+                        }
+
+                        a.prev {
+                            margin-right: 72px;
+                        }
+
+                        a.next {
+                            margin-left: 72px;
+                        }
+                    }
+
+                    .icon-quote.q-open {
+                        margin-left: 40px;
+                    }
+
+                    .icon-quote.q-close {
+                        margin-right: 40px;
+                    }
+                }
+
+                video {
+                    width: 498px;
+                    height: 281px;
+                }
+            }
+        }
+
+        .home-block-4 {
+            background: linear-gradient(177deg, $bg-gray 11%, $white-color 11.2%);
+
+            .block-image {
+                margin-top: 0;
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 1366px) {
+    .home-index {
+        .home-header {
+            background: linear-gradient(176.5deg,rgba(0,91,146,.8) 0%,rgba(0,61,97,.8) 82%, $bg-gray 82.2%);
+
+            .search-home-header {
+                margin-left: -80px;
+            }
+
+            .header-image {
+                max-width: 500px;
+                margin: -70px 50px 64px -100px;
+            }
+        }
+
+        .home-block-2 {
+            padding: 40px;
+
+            .steps {
+                .step {
+                    margin: 0 40px;
+                }
+            }
+        }
+
+        .home-block-3 {
+            .testimonies .slide-block {
+
+                .slideshow-container {
+                    .slide {
+                        min-height: 280px;
+                    }
+
+                    a.prev {
+                        margin-right: 72px;
+                    }
+
+                    a.next {
+                        margin-left: 72px;
+                    }
+                }
+
+                .icon-quote.q-open {
+                    margin-left: 40px;
+                }
+
+                .icon-quote.q-close {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        .home-block-4 {
+            .block-image {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1919px) and (min-width: 1601px) {
+    .home-index {
+        .home-header {
+            .search-home-header {
+                margin-left: -80px;
+            }
+        }
+
+        .home-block-2 {
+            padding: 40px;
+
+            .steps {
+                .step {
+                    margin: 0 40px;
+                }
+            }
+        }
+
+        .home-block-3 {
+            .testimonies .slide-block {
+                .slideshow-container {
+                    .slide {
+                        min-height: 210px;
+                    }
+                }
+            }
+        }
+
+        .home-block-4 {
+            .block-image {
+                margin-left: 16px;
+            }
+        }
+    }
+}

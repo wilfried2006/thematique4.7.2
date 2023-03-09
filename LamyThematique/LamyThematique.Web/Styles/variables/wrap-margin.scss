@@ -1,0 +1,87 @@
+/* WRAPPERS */
+
+@mixin after-lear-both() {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin wrapped() {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wrap,
+.block-wrap {
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    @media screen and (max-width: 550px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &.\-medium {
+        max-width: 117rem;
+    }
+
+    &.\-small {
+        max-width: 89.4rem;
+    }
+}
+
+/***
+**** FLEX
+***/
+.\-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.\-flexColumn {
+    flex-direction: column;
+}
+
+.\-flexWrap {
+    flex-wrap: wrap;
+}
+
+.\-flexJustifyEnd {
+    justify-content: flex-end;
+}
+
+.\-flexJustifySpaceBetween {
+    justify-content: space-between;
+}
+
+.\-flexJustifySpaceAround {
+    justify-content: space-around;
+}
+
+.\-flexJustifySpaceEvenly {
+    justify-content: space-evenly;
+}
+
+.\-flexJustifyCenter {
+    justify-content: center;
+}
+
+.\-flexAlignCenter {
+    align-items: center;
+    align-content: center;
+}
+
+.\-flexStretch {
+    align-items: stretch;
+}

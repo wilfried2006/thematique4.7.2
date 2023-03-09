@@ -1,0 +1,178 @@
+﻿@media only screen and (max-width: 768px) and (min-width: 320px) {
+    .user-profile-wrapper {
+        min-height: calc(100vh - 132px);
+        display: grid;
+        width: 100%;
+        justify-content: stretch;
+        overflow-y: hidden;
+
+        .mon-employeur-top-buttons {
+            margin: 56px 0 16px auto;
+        }
+
+        &.iframe {
+            #mon-entreprise-top-buttons {
+                margin-top: 42px;
+
+                .btn {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        &.content {
+            padding: 40px 16px 32px 16px;
+
+            &.board {
+                padding-top: 40px;
+            }
+        }
+
+        .mobile-title {
+            display: block;
+            margin: 16px 0;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 100%;
+            min-height: unset;
+            padding: 0 8px;
+            z-index: 2;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+
+            #user-nav-menu {
+                display: none;
+                padding-bottom: 16px;
+            }
+           
+        }
+
+     
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .user-profile-wrapper {
+        .profile-desc {
+            .center-block {
+                margin-bottom: 32px;
+
+                .center-desc {
+                    margin-top: 32px;
+                    flex-direction: column;
+                    text-align: left;
+
+                    .desc-block {
+                        display: flex;
+                        align-items: center;
+                        max-width: unset;
+                        margin: 0;
+
+                        img {
+                            height: 100px;
+                            margin: 0;
+                            padding-right: 16px;
+                        }
+
+                        &:first-child {
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .user-profile-wrapper {
+        .profile-desc {
+            .center-block .center-desc {
+                .desc-block {
+                    max-width: unset;
+
+                    &:first-child {
+                        padding-right: 8px;
+                    }
+
+                    &:last-child {
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1366px) {
+    .user-profile-wrapper {
+
+        .sidebar {
+            .profile {
+                margin-bottom: 24px;
+                display: block;
+                text-align: center;
+
+                .picture {
+                    margin: auto;
+                }
+
+                .username {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .user-profile-wrapper {
+        .sidebar {
+
+            .nav-footer {
+                width: 100%;
+            }
+
+            .profile {
+                margin-bottom: 24px;
+                display: block;
+                text-align: center;
+
+                .picture {
+                    margin: auto;
+                }
+
+                .username {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .user-profile-wrapper .empty-profile .full-block {
+        .absolute-text {
+            width: unset;
+        }
+    }
+}
+
+.user-profile-wrapper {
+    .mon-employeur-top-buttons {
+
+        @media only screen and (max-width: 1199px) {
+            max-width: 750px;
+        }
+
+        @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+            max-width: 970px;
+        }
+
+        @media only screen and (min-width: 1430px) {
+            max-width: 1170px;
+        }
+    }
+}

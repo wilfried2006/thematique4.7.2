@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "Scripts/search.min.js",
+    "inputFiles": [
+      "Scripts/search.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site.min.js",
+    "inputFiles": [
+      "Scripts/site.js"
+    ]
+  }
+]

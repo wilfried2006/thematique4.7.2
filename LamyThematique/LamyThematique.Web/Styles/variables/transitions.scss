@@ -1,0 +1,113 @@
+$transition-duration-playlist: 0.2s;
+$transition-timing-function: ease-out;
+
+@keyframes dash {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+    }
+
+    50% {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 120;
+    }
+
+    70% {
+        opacity: 10;
+    }
+
+    100% {
+        opacity: 10;
+        stroke-dasharray: 180;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes playlishover {
+    0% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes homeproduct {
+    0% {
+        width: 20%;
+        left: 50%;
+        right: 50%;
+    }
+
+    50% {
+        width: 49%;
+        left: 50%;
+        right: 10%;
+    }
+
+    100% {
+        width: 20%;
+        left: 80%;
+        right: 50%;
+    }
+}
+
+@keyframes homeproductarrow {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes homeproductrevers {
+    0% {
+        width: 20%;
+        left: 80%;
+        right: 50%;
+    }
+
+    50% {
+        width: 49%;
+        left: 50%;
+        right: 10%;
+    }
+
+    100% {
+        width: 20%;
+        left: 50%;
+        right: 50%;
+    }
+}
