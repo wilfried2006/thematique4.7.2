@@ -30,10 +30,6 @@ namespace LamyThematique.Infrastructure.Database
                     connection.AccessToken = azureProvider.GetAccessTokenAsync("https://database.windows.net/").Result;
              
                 options.UseSqlServer(connection);
-
-                //options.UseSqlServer(connection,
-                //    optionsSqlServer => { optionsSqlServer.MigrationsAssembly(Assembly.GetExecutingAssembly().ToString()); });
-
             });
 
             return services;

@@ -16,6 +16,7 @@ using LamyThematique.Transformers.Application.Web;
 using System.Web.Mvc;
 using LamyThematique.Domain;
 using LamyThematique.Web.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 
 [assembly: OwinStartup(typeof(LamyThematique.Web.Startup))]
@@ -23,11 +24,8 @@ namespace LamyThematique.Web
 {
     public partial class Startup
     {
-        private IAppBuilder _appBuilder;
-
         public void Configuration(IAppBuilder app)
         {
-            _appBuilder = app;
             //ConfigureAuth(app);
             //app.Use(services);
 
@@ -57,7 +55,7 @@ namespace LamyThematique.Web
             services.RegisterLamyThemeInfrastructureRepositoryServices();
 
             services.RegisterLamyThemeInfrastructureDatabaseServices(dbConnectionString);
-
+            
             var appSettings = new AppSettings()
             {
                 Settings = new AppSettingsClass()

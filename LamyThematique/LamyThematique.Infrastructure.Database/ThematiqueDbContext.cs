@@ -5,7 +5,11 @@ using Microsoft.EntityFrameworkCore;
 namespace LamyThematique.Infrastructure.Database
 {
     public class ThematiqueDbContext : DbContext
-    { 
+    {
+        public ThematiqueDbContext() : base()
+        {
+        }
+
         public ThematiqueDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions) { }
 
         public DbSet<User> Users { get; set; }
