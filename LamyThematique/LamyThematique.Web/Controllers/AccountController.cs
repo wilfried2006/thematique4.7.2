@@ -12,6 +12,7 @@ using LamyThematique.Web.Models;
 
 namespace LamyThematique.Web.Controllers
 {
+    /*
     [Authorize]
     public class AccountController : Controller
     {
@@ -482,4 +483,9 @@ namespace LamyThematique.Web.Controllers
         }
         #endregion
     }
+
+
+*/
+
+
 }

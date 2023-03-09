@@ -16,7 +16,7 @@ namespace LamyThematique.Infrastructure.Database.Configurations
             builder.Property(x => x.LastName).IsRequired().HasMaxLength(250);
             builder.Property(x => x.AccessCode).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Email).IsRequired().HasMaxLength(250);
-            builder.Property(x => x.Created).IsRequired().HasDefaultValue(DateTime.Now);
+            builder.Property(x => x.Created).IsRequired();
             builder.Property(x => x.CreatedBy).IsRequired(false);
             builder.Property(x => x.LastModifiedBy).IsRequired(false);
             builder.Property(x => x.LastModified).IsRequired(false);

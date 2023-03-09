@@ -24,21 +24,28 @@ namespace LamyThematique.Web
     public partial class Startup
     {
         private IAppBuilder _appBuilder;
-      
+
         public void Configuration(IAppBuilder app)
         {
             _appBuilder = app;
             //ConfigureAuth(app);
-            var services = new ServiceCollection();
             //app.Use(services);
-            ConfigureServices(services);
 
+            var services = ConfigureServices();
             var resolver = new DefaultDependencyResolver(services.BuildServiceProvider());
             DependencyResolver.SetResolver(resolver);
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceCollection ConfigureServices()
         {
+            var dbConnectionString = ConfigurationManager.ConnectionStrings["thematiqueConnectionString"].ConnectionString;
+            
+            var services = new ServiceCollection();
+            services.AddControllersAsServices(typeof(Startup).Assembly.GetExportedTypes()
+                .Where(t => !t.IsAbstract && !t.IsGenericTypeDefinition)
+                .Where(t => typeof(IController).IsAssignableFrom(t)
+                            || t.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase)));
+
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -48,8 +55,6 @@ namespace LamyThematique.Web
             services.RegisterLamyThemeTransformersWebServices();
             services.RegisterLamyThemeApplicationWebServices();
             services.RegisterLamyThemeInfrastructureRepositoryServices();
-
-            var dbConnectionString = ConfigurationManager.ConnectionStrings["thematiqueConnectionString"].ConnectionString;
 
             services.RegisterLamyThemeInfrastructureDatabaseServices(dbConnectionString);
 
@@ -62,11 +67,9 @@ namespace LamyThematique.Web
             };
 
             services.AddSingleton(appSettings);
-            
-            services.AddControllersAsServices(typeof(Startup).Assembly.GetExportedTypes()
-                .Where(t => !t.IsAbstract && !t.IsGenericTypeDefinition)
-                .Where(t => typeof(IController).IsAssignableFrom(t)
-                            || t.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase)));
+
+
+            return services;
         }
     }
 }

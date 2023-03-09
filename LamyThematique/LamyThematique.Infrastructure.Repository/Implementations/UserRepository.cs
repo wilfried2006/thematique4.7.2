@@ -9,7 +9,10 @@ namespace LamyThematique.Infrastructure.Repository.Implementations
 {
     internal class UserRepository : BaseRepository, IUserRepository
     {
-        public UserRepository(ThematiqueDbContext thematiqueDbContext) : base(thematiqueDbContext) { }
+        public UserRepository(ThematiqueDbContext thematiqueDbContext) : base(thematiqueDbContext)
+        {
+
+        }
 
         public async Task<UserAccessCodeVO> GetUserAccessCodeAsync(string email)
         {
@@ -22,6 +25,5 @@ namespace LamyThematique.Infrastructure.Repository.Implementations
                               AccessCode = user.AccessCode
                           }).FirstOrDefaultAsync();
         }
-
     }
 }
