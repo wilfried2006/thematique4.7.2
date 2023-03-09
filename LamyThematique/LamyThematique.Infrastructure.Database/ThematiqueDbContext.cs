@@ -23,5 +23,15 @@ namespace LamyThematique.Infrastructure.Database
         //    //optionsBuilder.uses
 
         //}
+
+
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=thematique;Trusted_Connection=True;TrustServerCertificate=True;");
+
+            //optionsBuilder.UseSqlServer(@"localhost;Database=thematique;Trusted_Connection=True;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=thematique");
+        }
     }
 }
