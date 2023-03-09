@@ -310,6 +310,8 @@
     <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Shared\Components\Breadcrumb\Breadcrumb.cs" />
+    <Compile Include="Views\Shared\Components\ProfileNavMenu\ProfileNavMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -398,8 +400,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -467,6 +467,16 @@
     <Content Include="Styles\variables\icons.scss" />
     <Content Include="Styles\variables\transitions.scss" />
     <Content Include="Styles\variables\wrap-margin.scss" />
+    <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\Search\_SearchResult.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Privacy.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Shared\Components\Breadcrumb\Default.cshtml" />
+    <Content Include="Views\Shared\Components\ProfileNavMenu\Default.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LamyThematique.Application.Web\LamyThematique.Application.Web.csproj">

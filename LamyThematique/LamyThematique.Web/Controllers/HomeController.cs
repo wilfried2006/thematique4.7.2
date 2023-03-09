@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using LamyThematique.Domain;
 using LamyThematique.Domain.Helpers;
 using LamyThematique.Domain.User.Interfaces.Services;
 using LamyThematique.ViewModels.Web.Models.Search;
@@ -14,19 +15,22 @@ using Schema.NET;
 
 namespace LamyThematique.Web.Controllers
 {
+    [Route("Home")]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly IAppLogger<HomeController> _logger;
 
-        private readonly IGetUserPageService _getUserPageService; 
+        private readonly IGetUserPageService _getUserPageService;
 
-        public HomeController(ILogger<HomeController> logger, IGetUserPageService getUserPageService)
+        public HomeController(IGetUserPageService getUserPageService)
         {
-            _logger = logger;
+            //_logger = logger;
             _getUserPageService = getUserPageService;
         }
 
-        public async Task<ActionResult> Index()
+        [HttpGet]
+        [Route("Index")]
+        public ActionResult Index()
         {
             //var t = await _getUserInformationService.CheckIfPasswordIdRightAsync("", "");
 
@@ -42,21 +46,18 @@ namespace LamyThematique.Web.Controllers
             return View(homeViewModel);
         }
 
-        public ActionResult Privacy()
-        {
-            return View();
-        }
-        
+
         //public ActionResult Error()
         //{
         //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         //}
-        
+        [HttpGet]
+        [Route("Test")]
         public ActionResult Test()
         {
             var model = new SearchResultPageViewModel()
             {
-                EnableTypes = true ,
+                EnableTypes = true,
                 Types = new List<SearchCheckboxViewModel>()
                 {
                     new SearchCheckboxViewModel()

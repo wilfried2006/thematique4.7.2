@@ -1,0 +1,53 @@
+﻿@model LamyThematique.ViewModels.Web.Pages.Test.SearchResultPageViewModel;
+
+<div id="app">
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 40px;">
+            <div v-for="(item, index) in model.selectFilters" class="col-4" style="display:inline-grid;">
+                <span class="fw-bold fs-5">{{ item.title }}</span>
+                <select v-model="selectedItems[index]" v-on:change="onChangeEvent(index)" :disabled='item.enabled'>
+                    <option v-if="index!=0" value="0">Select something...</option>
+                    <option v-for="option in item.items" v-bind:value="option.id" :disabled='item.disabled ===true'>
+                        {{ option.label }}
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="color:#757575;">Les fiches pratiques</div>
+        </div>
+        <div>
+            @if (Model.EnableTypes)
+            {
+                <div class="row">
+                    <div class="col-4" v-for="chox in checkboxes">
+                        <input v-bind:id="chox.id" type="checkbox" v-model="chox.checked">
+                        <label v-bind:for="chox.id">{{ chox.label }}</label>
+                    </div>
+                </div>
+            }
+            <div class="row">
+                <div class="col-4" style="background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #DADADA;border-radius: 4px;opacity: 1;padding:15px;"
+                     v-for="(item, index) in model.items">
+
+                    <h8 class="lt-fw-bolder" style="margin-bottom:17px; text-transform: uppercase;">
+                        <span class="badge bg-warning text-dark ">{{ item.badge }} </span>
+                    </h8>
+
+                    <h6 class="fc-gray-3 lt-fw-bold">
+                        {{ item.title}}
+                    </h6>
+
+                    <h4 class="lt-bold" style=" margin-bottom:8px; color: #353535;">
+                        {{ item.subject }}
+                    </h4>
+                    <h6 class="fc-gray-3">
+                        {{ item.createdAt}}
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

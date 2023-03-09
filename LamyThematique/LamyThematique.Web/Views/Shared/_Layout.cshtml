@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -41,5 +41,37 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+</body>
+</html>*@
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lamy.Theme.Web</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2f7869450a.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Styles/site.min.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="~/Scripts/site.min.js" asp-append-version="true"></script>
+
+    @RenderSection("HeaderScripts", required: false)
+
+</head>
+<body>
+
+<partial name="_Header.cshtml" />
+<partial name="_Menu.cshtml" />
+<div> 
+    @RenderBody()
+</div>
+
+<partial name="_Footer.cshtml" />
+
+@RenderSection("Scripts", required: false)
 </body>
 </html>

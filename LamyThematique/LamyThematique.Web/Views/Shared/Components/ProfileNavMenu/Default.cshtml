@@ -1,0 +1,60 @@
+﻿@using System.Security.Claims
+@model Lamy.Theme.ViewModels.Pages.UserProfile.UserProfileViewModel
+
+@{
+
+    var monProfil = ViewData["CurrentPage"] == "Profil" ? " current " : string.Empty;
+}
+
+
+<div id="user-nav-menu">
+    <div class="nav-menu">
+        <div class="nav-link">
+            <img class="navbar-dashboard-icon" src="/images/Profile/gauge-high-solid.svg" alt="compteUtilisateurIcon">
+            <ul>
+                <a>
+                    Tableau de bord
+                </a>
+
+            </ul>
+        </div>
+        <div class="nav-link">
+            <img class="navbar-dashboard-icon" src="/images/Profile/briefcase-solid.svg" alt="compteUtilisateurIcon">
+            <ul>
+                <a class="@monProfil">
+                    Mes contenus
+                </a>
+
+                <li><a href=""> Mes favoris</a></li>
+                <li><a href="">Mes recherches</a></li>
+                <li><a href="">Mon clausier</a></li>
+                <li><a href="">Ma veille</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-link">
+            <img class="navbar-dashboard-icon" src="/images/Profile/user-regular.svg" alt="compteUtilisateurIcon">
+
+            <ul>
+                <a>
+                    Mon compte
+                </a>
+
+                <li><a class="monProfil" href=""> Profil </a></li>
+                <li><a href="">Abonnement​</a></li>
+
+            </ul>
+        </div>
+                <div class="nav-link">
+            <img class="navbar-dashboard-icon" src="/images/Profile/comment-dots-regular.svg" alt="compteUtilisateurIcon">
+
+            <ul>
+                <a>
+                   Contact
+                </a>
+            </ul>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+﻿@{
+    var firstname = "Franck";  //User.Identity.IsAuthenticated ? User.Claims?.FirstOrDefault(x => x.Type.Equals("firstname", StringComparison.OrdinalIgnoreCase))?.Value : "";
+    var lastname = "Wilfried"; // User.Identity.IsAuthenticated ? User.Claims?.FirstOrDefault(x => x.Type.Equals("lastname", StringComparison.OrdinalIgnoreCase))?.Value : "";
+}
+
+
+<div id="wrapper">
+    <input type="checkbox" class="menu-toggle" id="menu-toggle">
+    <div id="mobileBar" class="mobile-bar">
+        <label for="menu-toggle" class="menu-icon"><span></span></label>
+
+        <a class="navbar-logo-responsive" href="/">
+            <img src="~/images/LAMYLINE2.png" alt="Lamy Thématique">
+        </a>
+        <a onclick="toggleSearchHeader()" class="search-reponsive">
+            <svg class="icon-nav-header"><use xlink:href="/css/fonts/sprite.svg#icon-search" /></svg>
+        </a>
+
+    </div>
+
+
+    <div>
+    </div>
+    <header class="header -flex -flexJustifySpaceBetween -flexAlignCenter">
+        <span class="logo">
+            <a class="-flex -flexAlignCenter"
+               onclick="HandleClickAnalytics($(this))"
+               href="/"
+               data-analytics-category="navigation"
+               data-analytics-action="LogoProduit"
+               data-analytics-label="">
+            </a>
+        </span>
+        <h1 class="head-title"> Thématique </h1>
+
+
+        <h5>
+            @firstname @lastname
+        </h5>
+        <ul class="navbar-nav">
+
+            <li>
+                @*  <a onclick="toggleSearchHeader()" class="search">
+                    </a>
+                    <svg class="icon-nav-header"><use xlink:href="/css/fonts/sprite.svg#icon-search" /></svg><span class="search-title">&nbsp;&nbsp;Rechercher</span>
+                *@
+                <label class="search-label">
+                    <input class="header-search-input" type="text" placeholder="Rechercher">
+                    <img class="navbar-search-icon" src="~/images/search-solid.svg" alt="compteUtilisateurIcon" />
+
+
+                </label>
+
+
+            </li>
+            @*@await Html.PartialAsync("_LoginPartial", null)*@
+
+            <li>
+                <div class="btn p-0 m-0" type="button" data-toggle="modal" data-target="#hub">
+                    <div class="hub-button">&nbsp;</div>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+</div>
