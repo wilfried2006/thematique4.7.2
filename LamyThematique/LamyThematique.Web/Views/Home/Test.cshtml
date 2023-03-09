@@ -1,10 +1,9 @@
-﻿@using System.Text.Json;
-@model LamyThematique.ViewModels.Web.Pages.Test.SearchResultPageViewModel;
-
+﻿@using System.Text.Json
+@model LamyThematique.ViewModels.Web.Pages.Test.SearchResultPageViewModel
 
 @*@await(Component.InvokeAsync("Breadcrumb"))*@
 
-@*@Html.Partial("Search/_SearchResult", @Model)*@
+@Html.Partial("Search/_SearchResult", @Model)
 
 @section HeaderScripts {
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
