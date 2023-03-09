@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Implementations\GetUserPageService.cs" />
     <Compile Include="Implementations\UserAuthenticationService.cs" />
-    <Compile Include="LamyThemeApplicationWebModule.cs" />
+    <Compile Include="LamyThematiqueApplicationWebModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

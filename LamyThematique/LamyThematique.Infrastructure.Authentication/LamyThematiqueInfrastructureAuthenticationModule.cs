@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Infrastructure.Authentication
 {
-    public static class LamyThemeInfrastructureAuthenticationModule
+    public static class LamyThematiqueInfrastructureAuthenticationModule
     {
-        public static void RegisterLamyThemeInfrastructure(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructure(this IServiceCollection services)
         {
             //services.AddTransient<IMaboOnlineOrderService, MaboOnlineOrderService>();
             //services.AddTransient<IMaboSearchService, MaboSearchService>();

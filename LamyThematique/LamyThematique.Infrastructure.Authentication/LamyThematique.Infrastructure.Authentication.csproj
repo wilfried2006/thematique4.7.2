@@ -84,7 +84,7 @@
     <Compile Include="Implementations\UserAuthenticationMaboInfrastructure.cs" />
     <Compile Include="Interfaces\IUserAuthenticationInfrastructure.cs" />
     <Compile Include="Interfaces\IUserAuthenticationMaboInfrastructure.cs" />
-    <Compile Include="LamyThemeInfrastructureAuthenticationModule.cs" />
+    <Compile Include="LamyThematiqueInfrastructureAuthenticationModule.cs" />
     <Compile Include="Models\Mabo\Dto\ParentUserInfosModel.cs" />
     <Compile Include="Models\Mabo\Dto\UserAuthenticationResultModel.cs" />
     <Compile Include="Models\Mabo\Dto\UserInfosModel.cs" />

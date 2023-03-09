@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Application.Web
 {
-    public static class LamyThemeApplicationWebModule
+    public static class LamyThematiqueApplicationWebModule
     {
-        public static void RegisterLamyThemeApplicationWebServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueApplicationWebServices(this IServiceCollection services)
         { 
             services.AddTransient<IGetUserPageService, GetUserPageService>();
             services.AddTransient<IUserAuthenticationService, UserAuthenticationService>();

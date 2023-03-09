@@ -85,7 +85,7 @@
   <ItemGroup>
     <Compile Include="Implementations\FakeMailer.cs" />
     <Compile Include="Implementations\Mailer.cs" />
-    <Compile Include="LamyThemeInfrastructureMailingModule.cs" />
+    <Compile Include="LamyThematiqueInfrastructureMailingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

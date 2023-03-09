@@ -4,14 +4,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Infrastructure.Logging
 {
-    public static class LamyThemeInfrastructureLoggingModule
+    public static class LamyThematiqueInfrastructureLoggingModule
     {
-        public static void RegisterLamyThemeInfrastructureLoggingServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructureLoggingServices(this IServiceCollection services)
         {
             services.AddTransient(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
         }
 
-        public static void RegisterLamyThemeInfrastructureLoggingForTestingServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructureLoggingForTestingServices(this IServiceCollection services)
         {
             services.AddTransient(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
         }

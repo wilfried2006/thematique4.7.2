@@ -68,7 +68,7 @@
   <ItemGroup>
     <Compile Include="Implementations\FakeLoggerAdapter.cs" />
     <Compile Include="Implementations\LoggerAdapter.cs" />
-    <Compile Include="LamyThemeInfrastructureLoggingModule.cs" />
+    <Compile Include="LamyThematiqueInfrastructureLoggingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

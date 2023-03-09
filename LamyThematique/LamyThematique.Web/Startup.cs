@@ -47,14 +47,14 @@ namespace LamyThematique.Web
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-            services.RegisterLamyThemeInfrastructure();
-            services.RegisterLamyThemeInfrastructureMailingServices();
-            services.RegisterLamyThemeInfrastructureLoggingServices();
-            services.RegisterLamyThemeTransformersWebServices();
-            services.RegisterLamyThemeApplicationWebServices();
-            services.RegisterLamyThemeInfrastructureRepositoryServices();
+            services.RegisterLamyThematiqueInfrastructure();
+            services.RegisterLamyThematiqueInfrastructureMailingServices();
+            services.RegisterLamyThematiqueInfrastructureLoggingServices();
+            services.RegisterLamyThematiqueTransformersWebServices();
+            services.RegisterLamyThematiqueApplicationWebServices();
+            services.RegisterLamyThematiqueInfrastructureRepositoryServices();
 
-            services.RegisterLamyThemeInfrastructureDatabaseServices(dbConnectionString);
+            services.RegisterLamyThematiqueInfrastructureDatabaseServices(dbConnectionString);
             
             var appSettings = new AppSettings()
             {

@@ -4,14 +4,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Infrastructure.Mailing
 {
-    public static class LamyThemeInfrastructureMailingModule
+    public static class LamyThematiqueInfrastructureMailingModule
     {
-        public static void RegisterLamyThemeInfrastructureMailingServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructureMailingServices(this IServiceCollection services)
         {
             services.AddTransient<IMailer, Mailer>();
         }
 
-        public static void RegisterLamyThemeInfrastructureMailingForTestingServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructureMailingForTestingServices(this IServiceCollection services)
         {
             services.AddTransient<IMailer, FakeMailer>();
         }

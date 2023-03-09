@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Transformers.Application.Web
 {
-    public static class LamyThemeTransformersWebModule
+    public static class LamyThematiqueTransformersWebModule
     {
-        public static void RegisterLamyThemeTransformersWebServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueTransformersWebServices(this IServiceCollection services)
         {
             services.AddTransient<IUserAuthenticationTransformer, UserAuthenticationTransformer>();
         }

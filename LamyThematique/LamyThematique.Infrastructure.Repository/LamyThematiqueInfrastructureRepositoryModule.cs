@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Infrastructure.Repository
 {
-    public static class LamyThemeInfrastructureRepositoryModule
+    public static class LamyThematiqueInfrastructureRepositoryModule
     {
-        public static void RegisterLamyThemeInfrastructureRepositoryServices(this IServiceCollection services)
+        public static void RegisterLamyThematiqueInfrastructureRepositoryServices(this IServiceCollection services)
         {
             services.AddTransient<IUserRepository, UserRepository>();
         }

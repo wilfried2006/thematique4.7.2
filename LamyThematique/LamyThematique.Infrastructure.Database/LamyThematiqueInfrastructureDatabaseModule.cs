@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace LamyThematique.Infrastructure.Database
 {
-    public static class LamyThemeInfrastructureDatabaseModule
+    public static class LamyThematiqueInfrastructureDatabaseModule
     {
         /// <summary>
         /// AddSqlServer
@@ -16,7 +16,7 @@ namespace LamyThematique.Infrastructure.Database
         /// <param name="services"></param>
         /// <param name="conn"></param>
         /// <returns></returns>
-        public static IServiceCollection RegisterLamyThemeInfrastructureDatabaseServices(this IServiceCollection services, string connectionString)
+        public static IServiceCollection RegisterLamyThematiqueInfrastructureDatabaseServices(this IServiceCollection services, string connectionString)
         {
             services.AddSingleton(new AzureServiceTokenProvider());
             
