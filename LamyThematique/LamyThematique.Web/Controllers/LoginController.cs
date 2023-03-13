@@ -1,21 +1,18 @@
-﻿using System;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using LamyThematique.Domain.User.Interfaces.Services;
 using LamyThematique.ViewModels.Web.Models.Authentication;
-using Microsoft.Owin.Security.Cookies;
 
 namespace LamyThematique.Web.Controllers
 {
     [Route("Login")]
     public class LoginController : Controller
     {
-        private IUserAuthenticationService _userAuthenticationService { get; set; }
+        private IUserAuthenticationService UserAuthenticationService { get; set; }
 
         public LoginController(IUserAuthenticationService userAuthenticationService)
         {
-            _userAuthenticationService = userAuthenticationService;
+            UserAuthenticationService = userAuthenticationService;
         }
 
         [HttpGet]
@@ -31,7 +28,7 @@ namespace LamyThematique.Web.Controllers
         [Route("Connect")]
         public async Task<ActionResult> Connect(AuthenticationFormViewModel form)
         {
-            var result = await _userAuthenticationService.AuthenticateUserAsync(form);
+            var result = await UserAuthenticationService.AuthenticateUserAsync(form);
 
             if (result.ResultCode == "ok")
             {

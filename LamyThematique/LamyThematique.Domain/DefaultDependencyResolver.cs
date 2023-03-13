@@ -11,17 +11,17 @@ namespace LamyThematique.Domain
 
         public DefaultDependencyResolver(IServiceProvider serviceProvider)
         {
-            this.ServiceProvider = serviceProvider;
+            ServiceProvider = serviceProvider;
         }
 
         public object GetService(Type serviceType)
         {
-            return this.ServiceProvider.GetService(serviceType);
+            return ServiceProvider.GetService(serviceType);
         }
             
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return this.ServiceProvider.GetServices(serviceType);
+            return ServiceProvider.GetServices(serviceType);
         }
     }
 }

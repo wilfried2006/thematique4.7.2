@@ -15,8 +15,8 @@ using LamyThematique.Infrastructure.Repository;
 using LamyThematique.Transformers.Application.Web;
 using System.Web.Mvc;
 using LamyThematique.Domain;
+using LamyThematique.Infrastructure.ReadRepository;
 using LamyThematique.Web.Extensions;
-using Microsoft.EntityFrameworkCore;
 
 
 [assembly: OwinStartup(typeof(LamyThematique.Web.Startup))]
@@ -36,13 +36,23 @@ namespace LamyThematique.Web
 
         public IServiceCollection ConfigureServices()
         {
-            var dbConnectionString = ConfigurationManager.ConnectionStrings["thematiqueConnectionString"].ConnectionString;
-            
             var services = new ServiceCollection();
+
             services.AddControllersAsServices(typeof(Startup).Assembly.GetExportedTypes()
                 .Where(t => !t.IsAbstract && !t.IsGenericTypeDefinition)
                 .Where(t => typeof(IController).IsAssignableFrom(t)
                             || t.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase)));
+           
+            var appSettings = new AppSettings()
+            {
+                Settings = new AppSettingsClass()
+                {
+                    AuthApiIpAddress = ConfigurationManager.AppSettings.Get("TestMigrationFra")
+                },
+                DatabaseConnectionString = ConfigurationManager.ConnectionStrings["thematiqueConnectionString"].ConnectionString
+            };
+
+            services.AddSingleton(appSettings);
 
 
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -53,19 +63,11 @@ namespace LamyThematique.Web
             services.RegisterLamyThematiqueTransformersWebServices();
             services.RegisterLamyThematiqueApplicationWebServices();
             services.RegisterLamyThematiqueInfrastructureRepositoryServices();
+            services.RegisterLamyThematiqueInfrastructureReadRepositoryServices();
 
-            services.RegisterLamyThematiqueInfrastructureDatabaseServices(dbConnectionString);
-            
-            var appSettings = new AppSettings()
-            {
-                Settings = new AppSettingsClass()
-                {
-                    AuthApiIpAddress = ConfigurationManager.AppSettings.Get("TestMigrationFra")
-                }
-            };
+            services.RegisterLamyThematiqueInfrastructureDatabaseServices();
 
-            services.AddSingleton(appSettings);
-
+     
 
             return services;
         }

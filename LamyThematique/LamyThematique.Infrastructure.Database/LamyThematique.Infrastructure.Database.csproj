@@ -138,6 +138,7 @@
       <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
@@ -184,13 +185,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\SousThemeConfiguration.cs" />
+    <Compile Include="Configurations\ThemeConfiguration.cs" />
+    <Compile Include="Configurations\SujetConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
     <Compile Include="Entities\Base\Entity.cs" />
     <Compile Include="Entities\Base\EntityOfByte.cs" />
     <Compile Include="Entities\Base\EntityOfInt.cs" />
     <Compile Include="Entities\Base\IHasKey.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Document\Theme.cs" />
+    <Compile Include="Entities\Document\SousTheme.cs" />
+    <Compile Include="Entities\Document\Sujet.cs" />
+    <Compile Include="Entities\User\User.cs" />
     <Compile Include="LamyThematiqueInfrastructureDatabaseModule.cs" />
+    <Compile Include="Migrations\20230313142222_init.cs" />
+    <Compile Include="Migrations\20230313142222_init.designer.cs">
+      <DependentUpon>20230313142222_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ThematiqueDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThematiqueDbContext.cs" />
   </ItemGroup>
@@ -199,7 +211,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <ProjectReference Include="..\LamyThematique.Domain\LamyThematique.Domain.csproj">
+      <Project>{89CCE4CD-5BB0-4AC3-A0B5-E098752BB5D6}</Project>
+      <Name>LamyThematique.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

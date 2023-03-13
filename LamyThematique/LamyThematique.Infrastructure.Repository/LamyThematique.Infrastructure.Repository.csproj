@@ -115,12 +115,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementations\BaseRepository.cs" />
+    <Compile Include="Implementations\Read\DocumentRepository.cs" />
     <Compile Include="Implementations\UserRepository.cs" />
     <Compile Include="LamyThematiqueInfrastructureRepositoryModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Implementations\Read\" />
     <Folder Include="Implementations\Write\" />
   </ItemGroup>
   <ItemGroup>

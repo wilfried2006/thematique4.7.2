@@ -15,10 +15,10 @@ namespace LamyThematique.Domain.Helpers
             xmlSerializer.Serialize(xmlTextWriter, xmlObject);
 
             string output = Encoding.UTF8.GetString(memoryStream.ToArray());
-            string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
-            if (output.StartsWith(_byteOrderMarkUtf8))
+            string byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+            if (output.StartsWith(byteOrderMarkUtf8))
             {
-                output = output.Remove(0, _byteOrderMarkUtf8.Length);
+                output = output.Remove(0, byteOrderMarkUtf8.Length);
             }
 
             return output;

@@ -1,6 +1,6 @@
 ﻿using LamyThematique.Infrastructure.Database.Entities.Base;
 
-namespace LamyThematique.Infrastructure.Database.Entities
+namespace LamyThematique.Infrastructure.Database.Entities.User
 { 
     public class User : EntityOfInt
     { 

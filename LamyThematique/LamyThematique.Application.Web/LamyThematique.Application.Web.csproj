@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\GetFiltersDataService.cs" />
     <Compile Include="Implementations\GetUserPageService.cs" />
     <Compile Include="Implementations\UserAuthenticationService.cs" />
     <Compile Include="LamyThematiqueApplicationWebModule.cs" />

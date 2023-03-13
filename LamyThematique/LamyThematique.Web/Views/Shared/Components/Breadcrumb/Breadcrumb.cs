@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using LamyThematique.ViewModels.Web.Pages.Navigation;
-
-namespace LamyThematique.Web.Views.Shared.Components.Breadcrumb
+﻿namespace LamyThematique.Web.Views.Shared.Components.Breadcrumb
 {
     //public class Breadcrumb : ViewComponent 
     //{

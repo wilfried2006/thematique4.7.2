@@ -6,6 +6,6 @@ namespace LamyThematique.Infrastructure.Authentication.Interfaces
 {
     public interface IUserAuthenticationInfrastructure
     {
-        Task<UserAuthenticationResponse> AuthentificateUserAsync(UserAuthenticationVO authModel);
+        Task<UserAuthenticationResponse> AuthentificateUserAsync(UserAuthenticationVo authModel);
     }
 }

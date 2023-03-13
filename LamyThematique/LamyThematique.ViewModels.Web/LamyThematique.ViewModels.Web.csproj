@@ -78,8 +78,9 @@
     <Compile Include="Models\Authentication\AuthenticationFormViewModel.cs" />
     <Compile Include="Models\Search\SearchCheckboxViewModel.cs" />
     <Compile Include="Models\Search\SearchContentResultItem.cs" />
-    <Compile Include="Models\Search\SearchSelectItemViewModel.cs" />
-    <Compile Include="Models\Search\SearchSelectsViewModel.cs" />
+    <Compile Include="Models\CheckboxItemViewModel.cs" />
+    <Compile Include="Models\SelectListViewModel.cs" />
+    <Compile Include="Models\SelectListItemViewModel.cs" />
     <Compile Include="Pages\Home\IndexPageViewModel.cs" />
     <Compile Include="Pages\Navigation\BreadcrumbViewModel.cs" />
     <Compile Include="Pages\Shared\HeaderViewModel.cs" />

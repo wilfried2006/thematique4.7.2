@@ -1,5 +1,4 @@
-﻿using System;
-using LamyThematique.Infrastructure.Database.Entities;
+﻿using LamyThematique.Infrastructure.Database.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -6,6 +6,6 @@ namespace LamyThematique.Domain.User.Interfaces.Services
 {
     public interface IUserAuthenticationService
     {
-        Task<UserAuthAppResultVO> AuthenticateUserAsync(AuthenticationFormViewModel authenticationFormViewModel);
+        Task<UserAuthAppResultVo> AuthenticateUserAsync(AuthenticationFormViewModel authenticationFormViewModel);
     }
 }

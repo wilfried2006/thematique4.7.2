@@ -178,6 +178,12 @@
     <Compile Include="Common\MaboSettings.cs" />
     <Compile Include="Common\SmtpSettings.cs" />
     <Compile Include="DefaultDependencyResolver.cs" />
+    <Compile Include="Document\Interfaces\Transformers\SearchResultPageTransformer.cs" />
+    <Compile Include="Document\Interfaces\Services\IGetFiltersDataService.cs" />
+    <Compile Include="Document\SousTheme.cs" />
+    <Compile Include="Document\Sujet.cs" />
+    <Compile Include="Document\Theme.cs" />
+    <Compile Include="Enums\PageEnums.cs" />
     <Compile Include="Helpers\AzureHelper.cs" />
     <Compile Include="Helpers\JsonPaywallHelper.cs" />
     <Compile Include="Helpers\NetworkHelper.cs" />
@@ -185,6 +191,7 @@
     <Compile Include="IAppLogger.cs" />
     <Compile Include="IMailer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Interfaces\IDocumentRepository.cs" />
     <Compile Include="User\Interfaces\IUserRepository.cs" />
     <Compile Include="User\Interfaces\Services\IGetUserPageService.cs" />
     <Compile Include="User\Interfaces\Services\IUserAuthenticationService.cs" />

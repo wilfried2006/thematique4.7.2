@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using LamyThematique.Domain.Helpers;
 using LamyThematique.Domain.User.Interfaces;
+using LamyThematique.Domain.User.Interfaces.Services;
 using LamyThematique.Domain.User.ValueObjects;
 using LamyThematique.Infrastructure.Authentication.Interfaces;
 using LamyThematique.Infrastructure.Authentication.Models.Mabo;
@@ -10,39 +11,39 @@ using LamyThematique.ViewModels.Web.Models.Authentication;
 
 namespace LamyThematique.Application.Web.Implementations
 {
-    internal class UserAuthenticationService : Domain.User.Interfaces.Services.IUserAuthenticationService
+    internal class UserAuthenticationService : IUserAuthenticationService
     {
-        public IUserAuthenticationInfrastructure userAuthenticationInfrastructure { get; set; }
+        public IUserAuthenticationInfrastructure UserAuthenticationInfrastructure { get; set; }
 
-        public IUserRepository _userRepository { get; set; }
-
-        public UserAuthenticationService(IUserAuthenticationInfrastructure userAuthenticationInfrastructure, IUserRepository userRepository)
-        {
-            _userRepository = userRepository;
-            this.userAuthenticationInfrastructure = userAuthenticationInfrastructure;
-        }
+        public IUserRepository UserRepository { get; set; }
 
         public UserAuthenticationService()
         {
         }
 
-        public async Task<UserAuthenticationResponse> GEtresponse(UserAuthenticationVO userAuthRequest) => 
-            await userAuthenticationInfrastructure.AuthentificateUserAsync(userAuthRequest);
+        public UserAuthenticationService(IUserAuthenticationInfrastructure userAuthenticationInfrastructure, IUserRepository userRepository)
+        {
+            UserRepository = userRepository;
+            UserAuthenticationInfrastructure = userAuthenticationInfrastructure;
+        }
 
-        public async Task<UserAuthAppResultVO> AuthenticateUserAsync(AuthenticationFormViewModel authenticationFormViewModel)
+        public async Task<UserAuthenticationResponse> GEtresponse(UserAuthenticationVo userAuthRequest) =>
+            await UserAuthenticationInfrastructure.AuthentificateUserAsync(userAuthRequest);
+
+        public async Task<UserAuthAppResultVo> AuthenticateUserAsync(AuthenticationFormViewModel authenticationFormViewModel)
         {
             var userClaims = new List<Claim>();
 
-            var user = await _userRepository.GetUserAccessCodeAsync(authenticationFormViewModel.Email);
+            var user = await UserRepository.GetUserAccessCodeAsync(authenticationFormViewModel.Email);
 
-            var userAuthRequest = new UserAuthenticationVO
+            var userAuthRequest = new UserAuthenticationVo
             {
                 Password = authenticationFormViewModel.Password,
                 AccessCode = user.AccessCode,
-                IpAddress = NetworkHelper.GetLocalIPAddress()
+                IpAddress = NetworkHelper.GetLocalIpAddress()
             };
 
-            var maboAuthenticationResult = await userAuthenticationInfrastructure.AuthentificateUserAsync(userAuthRequest);
+            var maboAuthenticationResult = await UserAuthenticationInfrastructure.AuthentificateUserAsync(userAuthRequest);
 
             if (maboAuthenticationResult.ResultCode == "ok")
             {
@@ -60,7 +61,7 @@ namespace LamyThematique.Application.Web.Implementations
 
             var claimsIdentity = new ClaimsIdentity(userClaims, "authentication");
 
-            return new UserAuthAppResultVO()
+            return new UserAuthAppResultVo()
             {
                 ResultCode = maboAuthenticationResult.ResultCode,
                 ClaimsIdentity = claimsIdentity

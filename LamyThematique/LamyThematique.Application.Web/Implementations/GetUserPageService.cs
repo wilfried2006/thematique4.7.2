@@ -7,11 +7,11 @@ namespace LamyThematique.Application.Web.Implementations
 {
     internal class GetUserPageService : IGetUserPageService
     {
-        private IUserRepository _userRepository { get; set; }
+        public IUserRepository UserRepository { get; set; }
 
         public GetUserPageService(IUserRepository userRepository)
         {
-            _userRepository = userRepository;
+            UserRepository = userRepository;
         }
 
         public IndexPageViewModel GetIndex(int? userId)

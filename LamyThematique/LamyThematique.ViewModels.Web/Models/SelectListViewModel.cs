@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace LamyThematique.ViewModels.Web.Models.Search
+namespace LamyThematique.ViewModels.Web.Models
 {
-    public class SearchSelectsViewModel
+    public class SelectListViewModel
     {
+        public int Id { get; set; }
+
         [JsonPropertyName("items")]
-        public List<SearchSelectItemViewModel> Items { get; set; }
+        public IEnumerable<SelectListItemViewModel> Items { get; set; }
 
         [JsonPropertyName("title")]
         public string Title { get; set; }

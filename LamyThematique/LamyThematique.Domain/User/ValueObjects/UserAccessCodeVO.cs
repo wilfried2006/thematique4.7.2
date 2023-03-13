@@ -1,6 +1,6 @@
 ﻿namespace LamyThematique.Domain.User.ValueObjects
 {
-    public class UserAccessCodeVO
+    public class UserAccessCodeVo
     {
         public int Id { get; set; }
 

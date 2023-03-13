@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\SearchResultPageTransformer.cs" />
     <Compile Include="Implementations\UserAuthenticationTransformer.cs" />
     <Compile Include="LamyThemeWebTransformers.Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +66,10 @@
     <ProjectReference Include="..\LamyThematique.Domain\LamyThematique.Domain.csproj">
       <Project>{89CCE4CD-5BB0-4AC3-A0B5-E098752BB5D6}</Project>
       <Name>LamyThematique.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LamyThematique.ViewModels.Web\LamyThematique.ViewModels.Web.csproj">
+      <Project>{E43837D8-3545-49EF-87DF-B4B2885F2568}</Project>
+      <Name>LamyThematique.ViewModels.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
