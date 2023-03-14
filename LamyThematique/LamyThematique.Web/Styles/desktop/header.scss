@@ -401,54 +401,72 @@
         font-weight: 300;
 
         li {
-            a {
-                text-decoration: none;
-                color: $blue-color;
-
-                &:link {
-                    text-decoration: none;
-                }
-
-                &:visited {
-                    text-decoration: none;
-                }
-
-                &:active {
-                    text-decoration: none;
-                    color: #474747;
-                }
-
-                &:after {
-                    display: block;
-                    width: 100%;
-                    background-color: $base-text--color;
-                    height: 1px;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    transition: all .2s;
-                    text-decoration: none;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            &:after {
+            /*       &:after {
                 content: '>';
                 display: inline-block;
                 text-decoration: none;
                 margin-left: 8px;
                 margin-right: 8px;
-            }
+            }*/
 
-            &:last-child {
-                color: $base-text--color;
+            ul {
+                display: inline-block;
 
-                &:after {
-                    display: none;
+                li {
+                    display: inline-block;
+
+                    a {
+                        text-decoration: none;
+                        color: $blue-color;
+
+                        &:link {
+                            text-decoration: none;
+                        }
+
+                        &:visited {
+                            text-decoration: none;
+                        }
+
+                        &:active {
+                            text-decoration: none;
+                            color: #474747;
+                        }
+
+                        &:after {
+                            display: block;
+                            width: 100%;
+                            background-color: $base-text--color;
+                            height: 1px;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: all .2s;
+                            text-decoration: none;
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+
+
+                    &:last-child {
+                        color: $base-text--color;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:before {
+                    content: '>';
+                    display: inline-block;
+                    text-decoration: none;
+                    margin-left: 8px;
+                    margin-right: 8px;
                 }
             }
         }

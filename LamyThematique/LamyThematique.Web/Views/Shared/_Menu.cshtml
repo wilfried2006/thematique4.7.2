@@ -10,7 +10,7 @@
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">THÉMATIQUES</a>
             </li>
             <li class="nav-item  bloc-menu">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Vues d'ensemble</a>
+                @Html.ActionLink("Vues d'ensemble", "Test","Home",null, new { @class = "nav-link text-dark" })
             </li>
             <li class="nav-item  bloc-menu">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Fiches pratiquese</a>

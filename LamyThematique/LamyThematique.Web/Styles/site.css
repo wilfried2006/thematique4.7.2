@@ -3250,21 +3250,36 @@ h10 {
   font-size: 12px;
   font-weight: 300;
 }
-.breadcrumb ul li a {
+.breadcrumb ul li {
+  /*       &:after {
+      content: '>';
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 8px;
+      margin-right: 8px;
+  }*/
+}
+.breadcrumb ul li ul {
+  display: inline-block;
+}
+.breadcrumb ul li ul li {
+  display: inline-block;
+}
+.breadcrumb ul li ul li a {
   text-decoration: none;
   color: #005B92;
 }
-.breadcrumb ul li a:link {
+.breadcrumb ul li ul li a:link {
   text-decoration: none;
 }
-.breadcrumb ul li a:visited {
+.breadcrumb ul li ul li a:visited {
   text-decoration: none;
 }
-.breadcrumb ul li a:active {
+.breadcrumb ul li ul li a:active {
   text-decoration: none;
   color: #474747;
 }
-.breadcrumb ul li a:after {
+.breadcrumb ul li ul li a:after {
   display: block;
   width: 100%;
   background-color: #232323;
@@ -3276,21 +3291,21 @@ h10 {
   transition: all 0.2s;
   text-decoration: none;
 }
-.breadcrumb ul li a:hover {
+.breadcrumb ul li ul li a:hover {
   text-decoration: underline;
 }
-.breadcrumb ul li:after {
+.breadcrumb ul li ul li:last-child {
+  color: #232323;
+}
+.breadcrumb ul li ul li:last-child:after {
+  display: none;
+}
+.breadcrumb ul li ul:before {
   content: ">";
   display: inline-block;
   text-decoration: none;
   margin-left: 8px;
   margin-right: 8px;
-}
-.breadcrumb ul li:last-child {
-  color: #232323;
-}
-.breadcrumb ul li:last-child:after {
-  display: none;
 }
 
 .breadcrumb-responsive {

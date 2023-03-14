@@ -10,5 +10,11 @@
     "inputFiles": [
       "Scripts/site.js"
     ]
+  },
+  {
+    "outputFileName": "Styles/desktop/desktop.min.css",
+    "inputFiles": [
+      "Styles/desktop/desktop.css"
+    ]
   }
 ]
