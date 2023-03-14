@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Reflection;
 using LamyThematique.Domain.Common;
@@ -12,6 +13,12 @@ namespace LamyThematique.Infrastructure.Database
     public class ThematiqueDbContext : DbContext
     {
         public AppSettings AppSettings { get; set; }
+        public string connectionString { get; set; }
+
+        public ThematiqueDbContext()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["thematiqueConnectionString"].ConnectionString;
+        }
 
         public ThematiqueDbContext(AppSettings appSettings, DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
@@ -38,7 +45,7 @@ namespace LamyThematique.Infrastructure.Database
 
             var connection = new SqlConnection()
             {
-                ConnectionString = AppSettings.DatabaseConnectionString,
+                ConnectionString = AppSettings != null ? AppSettings.DatabaseConnectionString : connectionString,
             };
 
             if (!"Development".Equals(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"), StringComparison.CurrentCultureIgnoreCase)
