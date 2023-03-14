@@ -15,10 +15,10 @@ namespace LamyThematique.Domain.Common
         public string NawUrl => Settings.NawUrl;
         public string NawAppKey => Settings.NawAppKey;
         public string NawSecretKey => Settings.NawSecretKey;
-        public List<string> MasterTOCs => Settings.MasterTOCs;
+        public List<string> MasterToCs => Settings.MasterToCs;
         public string NawImgUrl => Settings.NawImgUrl;
         public string NawMediaUrl => Settings.NawMediaUrl;
-        public string NawMediaIP => Settings.NawMediaIP;
+        public string NawMediaIp => Settings.NawMediaIp;
         public double SyncProcessHour => Settings.SyncProcessHour;
         public int SyncProcessInterval => Settings.SyncProcessInterval;
 
@@ -35,7 +35,7 @@ namespace LamyThematique.Domain.Common
         public string CalendarUrl => Settings.CalendarUrl;
 
         public string MaboEmbedUrl => Mabo?.MaboEmbedUrl;
-        public string MaboWSUri => Mabo?.MaboWSUri;
+        public string MaboWsUri => Mabo?.MaboWsUri;
 
         public string SmartSearchUrl => Settings.SmartSearchUrl;
         public int SmartSearchNumResults => Settings.SmartSearchNumResults;
@@ -54,6 +54,7 @@ namespace LamyThematique.Domain.Common
         public string AuthApiTokenUrl => Settings.AuthApiTokenUrl;
 
         public string SitemapPingUrl => Settings.SitemapPingUrl;
+        public string DatabaseConnectionString { get; set; }
 
         #endregion getters
     }
@@ -63,10 +64,10 @@ namespace LamyThematique.Domain.Common
         public string NawUrl { get; set; }
         public string NawAppKey { get; set; }
         public string NawSecretKey { get; set; }
-        public List<string> MasterTOCs { get; set; }
+        public List<string> MasterToCs { get; set; }
         public string NawImgUrl { get; set; }
         public string NawMediaUrl { get; set; }
-        public string NawMediaIP { get; set; }
+        public string NawMediaIp { get; set; }
         public double SyncProcessHour { get; set; }
         public int SyncProcessInterval { get; set; }
 

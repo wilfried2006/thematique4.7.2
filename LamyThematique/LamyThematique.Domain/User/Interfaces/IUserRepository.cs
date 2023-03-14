@@ -5,6 +5,6 @@ namespace LamyThematique.Domain.User.Interfaces
 {
     public interface IUserRepository
     {
-        Task<UserAccessCodeVO> GetUserAccessCodeAsync(string email);
+        Task<UserAccessCodeVo> GetUserAccessCodeAsync(string email);
     }
 }

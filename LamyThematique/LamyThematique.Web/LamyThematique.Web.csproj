@@ -536,6 +536,10 @@
       <Project>{9B946BE9-2864-4D91-8D24-7A3753E498FF}</Project>
       <Name>LamyThematique.Infrastructure.Mailing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LamyThematique.Infrastructure.ReadRepository\LamyThematique.Infrastructure.ReadRepository.csproj">
+      <Project>{5D876274-44EA-4E61-9A50-EE411B13E2FB}</Project>
+      <Name>LamyThematique.Infrastructure.ReadRepository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LamyThematique.Infrastructure.Repository\LamyThematique.Infrastructure.Repository.csproj">
       <Project>{761A186B-9FB2-4549-866E-C4C9B2EA25AE}</Project>
       <Name>LamyThematique.Infrastructure.Repository</Name>

@@ -6,15 +6,15 @@ namespace LamyThematique.Infrastructure.Authentication.Implementations
 {
     internal class UserAuthenticationMaboInfrastructure : IUserAuthenticationMaboInfrastructure
     {
-        public IdentificationPortTypeClient maboClient { get; set; }
+        public IdentificationPortTypeClient MaboClient { get; set; }
 
         public async Task<string> AuthenticationUserAsync(string remoteAddress, string xml)
         {
             //maboClient = new IdentificationPortTypeClient(IdentificationPortTypeClient. EndpointConfiguration.IdentificationPort, remoteAddress);
 
-            maboClient = new IdentificationPortTypeClient();
+            MaboClient = new IdentificationPortTypeClient();
 
-            return await maboClient.AuthentificationUserAsync(xml);
+            return await MaboClient.AuthentificationUserAsync(xml);
         }
     }
 }

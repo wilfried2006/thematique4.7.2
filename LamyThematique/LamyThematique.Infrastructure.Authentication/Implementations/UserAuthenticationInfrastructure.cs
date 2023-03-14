@@ -12,7 +12,7 @@ namespace LamyThematique.Infrastructure.Authentication.Implementations
 {
     internal class UserAuthenticationInfrastructure : IUserAuthenticationInfrastructure
     {
-        public AppSettings _appSettings { get; set; }
+        public AppSettings AppSettings { get; set; }
 
         public IUserAuthenticationMaboInfrastructure UserAuthenticationMaboInfrastructure { get; set; }
 
@@ -22,13 +22,13 @@ namespace LamyThematique.Infrastructure.Authentication.Implementations
         {
             UserAuthenticationMaboInfrastructure = userAuthenticationMaboInfrastructure;
             //_logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _appSettings = appSettings?.Value ?? throw new ArgumentNullException(nameof(appSettings));
+            AppSettings = appSettings?.Value ?? throw new ArgumentNullException(nameof(appSettings));
 
             //UserAuthenticationMaboInfrastructure.
             //maboClient = new IdentificationPortTypeClient(IdentificationPortTypeClient.EndpointConfiguration.IdentificationPort, _appSettings.MaboWSUri);
         }
 
-        public async Task<UserAuthenticationResponse> AuthentificateUserAsync(UserAuthenticationVO authModel)
+        public async Task<UserAuthenticationResponse> AuthentificateUserAsync(UserAuthenticationVo authModel)
         {
             var request = new UserAuthenticationModel()
             {
@@ -41,7 +41,7 @@ namespace LamyThematique.Infrastructure.Authentication.Implementations
 
             var xmlRequest = XmlHelper.SerializeToXmlString(request);
 
-            var strResponse = await UserAuthenticationMaboInfrastructure.AuthenticationUserAsync(_appSettings?.MaboWSUri, xmlRequest);
+            var strResponse = await UserAuthenticationMaboInfrastructure.AuthenticationUserAsync(AppSettings?.MaboWsUri, xmlRequest);
 
             //maboClient.AuthentificationUserAsync(xmlRequest);
 

@@ -14,12 +14,12 @@ namespace LamyThematique.Infrastructure.Repository.Implementations
 
         }
 
-        public async Task<UserAccessCodeVO> GetUserAccessCodeAsync(string email)
+        public async Task<UserAccessCodeVo> GetUserAccessCodeAsync(string email)
         {
             return await (from user in DbContext.Users
                           where user.Email == email
                           select
-                          new UserAccessCodeVO()
+                          new UserAccessCodeVo()
                           {
                               Id = user.Id,
                               AccessCode = user.AccessCode

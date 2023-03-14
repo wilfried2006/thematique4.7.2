@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using LamyThematique.ViewModels.Web.Pages.UserProfile;
-
-namespace LamyThematique.Web.Views.Shared.Components.ProfileNavMenu
+﻿namespace LamyThematique.Web.Views.Shared.Components.ProfileNavMenu
 {
     //public class ProfileNavMenu : ViewComponent
     //{

@@ -3,7 +3,7 @@ using LamyThematique.Domain.Base;
 
 namespace LamyThematique.Domain.User.ValueObjects
 {
-    public class UserAuthAppResultVO : BaseValueObject
+    public class UserAuthAppResultVo : BaseValueObject
     {
         public ClaimsIdentity ClaimsIdentity { get; set; }
 

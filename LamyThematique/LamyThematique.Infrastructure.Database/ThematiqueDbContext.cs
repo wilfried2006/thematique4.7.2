@@ -1,18 +1,30 @@
-﻿using System.Reflection;
-using LamyThematique.Infrastructure.Database.Entities;
+﻿using System;
+using System.Data.SqlClient;
+using System.Reflection;
+using LamyThematique.Domain.Common;
+using LamyThematique.Infrastructure.Database.Entities.Document;
+using LamyThematique.Infrastructure.Database.Entities.User;
+using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.EntityFrameworkCore;
 
 namespace LamyThematique.Infrastructure.Database
 {
     public class ThematiqueDbContext : DbContext
     {
-        public ThematiqueDbContext() : base()
+        public AppSettings AppSettings { get; set; }
+
+        public ThematiqueDbContext(AppSettings appSettings, DbContextOptions dbContextOptions) : base(dbContextOptions)
         {
+            this.AppSettings = appSettings;
         }
 
-        public ThematiqueDbContext(DbContextOptions dbContextOptions) : base(dbContextOptions) { }
-
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Sujet> Sujets { get; set; }
+
+        public DbSet<Theme> Themes { get; set; }
+
+        public DbSet<SousTheme> SousThemes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,22 +32,20 @@ namespace LamyThematique.Infrastructure.Database
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    //base.OnConfiguring(optionsBuilder);  
-
-        //    //optionsBuilder.uses
-
-        //}
-
-
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=thematique;Trusted_Connection=True;TrustServerCertificate=True;");
+            var azureProvider = new AzureServiceTokenProvider();
 
-            //optionsBuilder.UseSqlServer(@"localhost;Database=thematique;Trusted_Connection=True;TrustServerCertificate=True;");
-            //optionsBuilder.UseSqlServer(@"Server=localhost;Database=thematique");
+            var connection = new SqlConnection()
+            {
+                ConnectionString = AppSettings.DatabaseConnectionString,
+            };
+
+            if (!"Development".Equals(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"), StringComparison.CurrentCultureIgnoreCase)
+                && Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != null)
+                connection.AccessToken = azureProvider.GetAccessTokenAsync("https://database.windows.net/").Result;
+
+            optionsBuilder.UseSqlServer(connection);
         }
     }
 }

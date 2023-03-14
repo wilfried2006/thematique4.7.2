@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositorie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LamyThematique.Infrastructure.Repository", "LamyThematique.Infrastructure.Repository\LamyThematique.Infrastructure.Repository.csproj", "{761A186B-9FB2-4549-866E-C4C9B2EA25AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LamyThematique.Infrastructure.ReadRepository", "LamyThematique.Infrastructure.ReadRepository\LamyThematique.Infrastructure.ReadRepository.csproj", "{5D876274-44EA-4E61-9A50-EE411B13E2FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{761A186B-9FB2-4549-866E-C4C9B2EA25AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{761A186B-9FB2-4549-866E-C4C9B2EA25AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{761A186B-9FB2-4549-866E-C4C9B2EA25AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D876274-44EA-4E61-9A50-EE411B13E2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D876274-44EA-4E61-9A50-EE411B13E2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D876274-44EA-4E61-9A50-EE411B13E2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D876274-44EA-4E61-9A50-EE411B13E2FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +105,7 @@ Global
 		{1927193F-5E95-44F8-AFEB-2721F613D0BB} = {3EAFB3DE-88AF-4116-82F3-4CA533A441A2}
 		{81201B7F-AB67-44A8-AEEC-115D6F99082A} = {C79F170D-09FA-4BC3-A41B-74C104558913}
 		{761A186B-9FB2-4549-866E-C4C9B2EA25AE} = {81201B7F-AB67-44A8-AEEC-115D6F99082A}
+		{5D876274-44EA-4E61-9A50-EE411B13E2FB} = {81201B7F-AB67-44A8-AEEC-115D6F99082A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C03281CA-360D-412B-93F7-99537A3D82C8}

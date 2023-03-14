@@ -8,8 +8,8 @@
                 <span class="fw-bold fs-5">{{ item.title }}</span>
                 <select v-model="selectedItems[index]" v-on:change="onChangeEvent(index)" :disabled='item.enabled'>
                     <option v-if="index!=0" value="0">Select something...</option>
-                    <option v-for="option in item.items" v-bind:value="option.id" :disabled='item.disabled ===true'>
-                        {{ option.label }}
+                    <option v-for="option in item.items" v-bind:value="option.id" :disabled='item.disabled ===true' v-if="index==0 || (option.parentId ==selectedItems[index-1])">
+                        {{ option.label }} {{selectedItems[index]}} {{ option}}
                     </option>
                 </select>
             </div>
